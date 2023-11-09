@@ -88,7 +88,9 @@ useEffect(() => {
 
   console.log(description);
 
-
+  const headers = {
+    authorization: `${token}`,
+  };
 const handleSubmit=async()=>{
 
    try {
@@ -113,7 +115,8 @@ const handleSubmit=async()=>{
 
 
 
-    await axios.put(`http://localhost:3001/post/${id}`,{title,description,category,   coverImage: `${MainCoverImage.url}`})
+    await axios.put(`http://localhost:3001/post/${id}`,{title,description,category,   coverImage: `${MainCoverImage.url}`},
+    {headers})
     console.log('Successfully updated');
     navigate("/")
     console.log(MainCoverImage.url);

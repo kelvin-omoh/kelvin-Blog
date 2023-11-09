@@ -5,13 +5,12 @@ import { verifyToken } from '../middleware/middleware.js';
 
 const router =express.Router()
 
-router.post('/',addAPost)
+router.post('/',verifyToken,addAPost)
 router.get('/:id',getAPost)
 router.get('/',getAllPost)
-router.get('/:id',deleteAPost)
 router.get('/:id',getMypost)
-router.put('/:id',updateAPost)
-router.delete('/:id',deleteAPost)
+router.put('/:id',verifyToken,updateAPost)
+router.delete('/:id',verifyToken,deleteAPost)
 // router.get('/:id',deleteAPost)
 // router.post('/login',LoginUser)
 

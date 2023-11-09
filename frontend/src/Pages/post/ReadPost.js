@@ -28,6 +28,10 @@ const ReadPost = () => {
         return doc.body.textContent;
       }
 
+      const headers = {
+        authorization: `${token}`,
+      };
+
     useEffect(() => {
         const getPost = async () => {
           try {
@@ -54,7 +58,7 @@ const ReadPost = () => {
     
       const deleteAPost=async()=>{
         try {
-          await axios.delete(`http://localhost:3001/post/${id}`)
+          await axios.delete(`http://localhost:3001/post/${id}`,{headers})
       console.log(title+' deleted');
       navigate("/")
         } catch (error) {

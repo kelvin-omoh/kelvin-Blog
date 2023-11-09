@@ -79,7 +79,7 @@ console.log(token.accessToken);
       );
     const MainCoverImage=await res.json()
     const headers = {
-      Authorization: `Bearer ${token}`,
+      authorization: `${token}`,
     };
       
       await axios.post('http://localhost:3001/post/', {
