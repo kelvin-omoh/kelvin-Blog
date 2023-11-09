@@ -51,7 +51,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/post');
+        const res = await axios.get('https://kelvinblog-api.onrender.com/post');
         setAllPosts(res.data);
         setFilterData(res.data);
       } catch (error) {

@@ -82,7 +82,7 @@ console.log(token.accessToken);
       authorization: `${token}`,
     };
       
-      await axios.post('http://localhost:3001/post/', {
+      await axios.post('https://kelvinblog-api.onrender.com/post/', {
         title,
         description,
         coverImage: `${MainCoverImage.url}`, // Use the uploaded image URL

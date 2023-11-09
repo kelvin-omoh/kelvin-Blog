@@ -65,7 +65,7 @@ console.log(id);
 useEffect(() => {
   const getPost = async () => {
     try {
-      const res = await axios.get(`http://localhost:3001/post/${id}`);
+      const res = await axios.get(`https://kelvinblog-api.onrender.com/post/${id}`);
       const data = await res.data;
       console.log(data);
       setPost(data);
@@ -115,7 +115,7 @@ const handleSubmit=async()=>{
 
 
 
-    await axios.put(`http://localhost:3001/post/${id}`,{title,description,category,   coverImage: `${MainCoverImage.url}`},
+    await axios.put(`https://kelvinblog-api.onrender.com/post/${id}`,{title,description,category,   coverImage: `${MainCoverImage.url}`},
     {headers})
     console.log('Successfully updated');
     navigate("/")

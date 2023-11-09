@@ -21,7 +21,7 @@ const SignIn = () => {
     e.preventDefault()
 
     try{
-   const  res = await axios.post('http://localhost:3001/auth/login',{userName,password})
+   const  res = await axios.post('https://kelvinblog-api.onrender.com/auth/login',{userName,password})
 
         toast.success('Login successfull')
         setToken("accessToken",res.data)

@@ -35,7 +35,7 @@ const ReadPost = () => {
     useEffect(() => {
         const getPost = async () => {
           try {
-            const res = await axios.get(`http://localhost:3001/post/${id}`);
+            const res = await axios.get(`https://kelvinblog-api.onrender.com/post/${id}`);
             const data = await res.data;
             console.log(data);
             setPost(data);
@@ -58,7 +58,7 @@ const ReadPost = () => {
     
       const deleteAPost=async()=>{
         try {
-          await axios.delete(`http://localhost:3001/post/${id}`,{headers})
+          await axios.delete(`https://kelvinblog-api.onrender.com/post/${id}`,{headers})
       console.log(title+' deleted');
       navigate("/")
         } catch (error) {

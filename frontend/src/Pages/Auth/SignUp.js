@@ -11,7 +11,7 @@ const SignUp = () => {
     const navigate=useNavigate()
     const SignUp=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:3001/auth/register',{username:userName,password}).then(()=>{
+        axios.post('https://kelvinblog-api.onrender.com/auth/register',{username:userName,password}).then(()=>{
             alert('Registration completed')
             setPassword('')
             setUserName('')
